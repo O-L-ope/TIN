@@ -1,0 +1,152 @@
+@main-color: #ff0000;
+@background-color: #c2c2c2;
+@navbar-color: #ffffff;
+@text-font: "Montserrat", sans-serif;
+
+.flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-center() {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+body {
+  font-family: @text-font;
+  margin: 0;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  padding: 5px;
+  background-color: @navbar-color;
+  height: 100px;
+
+  .logopjatk {
+    display: grid;
+    justify-content: left;
+    align-content: center;
+    
+    img {
+      width: 100px;
+      height: auto;
+    }
+  }
+
+  .navbar {
+    display: grid;
+    justify-content: right;
+    align-content: center;
+    font-size: 42px;
+    font-weight: 600;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline;
+
+        a {
+          color: @main-color;
+          padding: 10px 15px;
+          text-decoration: none;
+          transition: color 0.3s;
+
+          &:hover {
+            color: darken(@main-color, 15%);
+          }
+        }
+      }
+    }
+
+    .bal {
+      display: inline;
+      height: 10px;
+      border-left: 2px solid darken(@background-color, 20%);
+    }
+  }
+
+  @media only screen and (max-width: 1040px) {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+
+    .logopjatk {
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .navbar {
+      display: block;
+      font-size: 32px;
+
+      ul {
+        .flex-center();
+        flex-direction: column;
+
+        li {
+          display: block;
+          width: 100%;
+          text-align: center;
+          border-bottom: 1px solid lighten(@background-color, 10%);
+          
+          &:last-child { border-bottom: none; }
+        }
+      }
+    }
+    .bal { display: none; }
+  }
+}
+
+.mainbody {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: @background-color;
+
+  .leftbox, .imagesbox, .rightbox {
+    margin: 5%;
+    
+    h2 {
+      color: darken(@main-color, 5%);
+    }
+  }
+
+  .imagesbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+    h2 { width: 100%; text-align: left; }
+
+    img {
+      height: 150px;
+      width: auto;
+      object-fit: cover;
+      border: 1px solid darken(@background-color, 10%);
+    }
+  }
+  @media only screen and (max-width: 1040px) {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
+
+footer {
+  .footerdiv {
+    .grid-center();
+    background-color: darken(@main-color, 25%);
+    color: white;
+    padding: 20px;
+
+    h3 { margin: 0; }
+  }
+}

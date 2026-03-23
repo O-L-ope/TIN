@@ -1,0 +1,146 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  padding: 5px;
+  background-color: #ffffff;
+  height: 100px;
+}
+
+header .logopjatk {
+  display: grid;
+  justify-content: left;
+  align-content: center;
+}
+
+header .logopjatk img {
+  width: 100px;
+  height: auto;
+}
+
+header .navbar {
+  display: grid;
+  justify-content: right;
+  align-content: center;
+  font-size: 42px;
+  font-weight: 600;
+}
+
+header .navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header .navbar ul li {
+  display: inline;
+}
+
+header .navbar ul li a {
+  color: #ff0000;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header .navbar ul li a:hover {
+  color: #b30000;
+}
+
+header .navbar .bal {
+  display: inline;
+  height: 10px;
+  border-left: 2px solid #8f8f8f;
+}
+
+@media only screen and (max-width: 1040px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+  }
+  header .logopjatk {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  header .navbar {
+    display: block;
+    font-size: 32px;
+  }
+  header .navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  header .navbar ul li {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid gainsboro;
+  }
+  header .navbar ul li:last-child {
+    border-bottom: none;
+  }
+  header .bal {
+    display: none;
+  }
+}
+
+.mainbody {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #c2c2c2;
+}
+
+.mainbody .leftbox, .mainbody .imagesbox, .mainbody .rightbox {
+  margin: 5%;
+}
+
+.mainbody .leftbox h2, .mainbody .imagesbox h2, .mainbody .rightbox h2 {
+  color: #e60000;
+}
+
+.mainbody .imagesbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.mainbody .imagesbox h2 {
+  width: 100%;
+  text-align: left;
+}
+
+.mainbody .imagesbox img {
+  height: 150px;
+  width: auto;
+  object-fit: cover;
+  border: 1px solid darkgray;
+}
+
+@media only screen and (max-width: 1040px) {
+  .mainbody {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
+
+footer .footerdiv {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: maroon;
+  color: white;
+  padding: 20px;
+}
+
+footer .footerdiv h3 {
+  margin: 0;
+}

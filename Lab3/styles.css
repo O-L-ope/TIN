@@ -1,0 +1,144 @@
+body{
+    font-family: "Montserrat";
+    margin: 0;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 100%;
+    /* gap: 1.5rem; */
+    padding: 5px;
+    background-color: white;
+    height: 100px;
+}
+.navbar{
+    display: grid;
+    justify-content: right;
+    align-content: center;
+    font-size: 42px;
+    font-weight: 600;
+}
+ul{
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+ul li{
+    display: inline;
+}
+ul li a{
+    color: red;
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+ul li a:hover{
+    color: rgb(131, 0, 0);
+}
+.bal{
+    display: inline;
+    height: 10px;
+    border-left: 2px gray;
+}
+.logopjatk{
+    display: grid;
+    justify-content: left;
+    align-content: center;
+}
+.logopjatk img{
+    width: 100px;
+    height: auto;
+}
+
+.mainbody{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    background-color: rgb(194, 194, 194);
+}
+.imagesbox img {
+    height: 150px;
+    width: auto;
+    object-fit: cover;
+}
+.leftbox{
+    /* display: grid; */
+    margin: 5%;
+}
+.imagesbox h2{
+    width: 100%;
+    text-align: left;
+}
+.imagesbox {
+    margin: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.rightbox{
+    margin: 5%;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+.footerdiv{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: black;
+    color: white;
+}
+
+
+/**Mobile**/
+@media only screen and (max-width: 1040px) {
+     header {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .logopjatk {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .navbar {
+        display: block;
+        font-size: 32px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+    }
+
+    ul li:last-child {
+        border-bottom: none;
+    }
+
+    .bal {
+        display: none;
+    }
+    .mainbody {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    
+}
