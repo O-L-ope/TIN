@@ -1,0 +1,24 @@
+.studentBox { 
+    border: 1px solid #000; 
+    margin-bottom: 2px; 
+    width: 400px;
+}
+
+.studentInfo { 
+    background-color: #C0C0C0; 
+    padding: 5px; 
+    cursor: pointer; 
+    border-bottom: 1px solid #000;
+}
+
+.studentContent { 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; 
+    background-color: #fff;
+}
+
+.hidden { 
+    display: none; 
+}

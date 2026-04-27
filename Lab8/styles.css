@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+}
+
+
+#tabelaAut{
+    background-color: rgb(160, 141, 255);
+}
+
+.student-main { 
+    border: 1px solid #484848; 
+    margin-bottom: 2px; 
+    width: 50%;
+    margin: 5px;
+    border-radius: 25px;
+}
+
+.student-personal { 
+    background-color: #9be3f9; 
+    padding: 5px;
+    border-bottom: 1px solid #000000;
+    border-radius: 25px;
+}
+
+/* .hidden > .student-personal{
+    border-bottom: none;
+} */
+
+.studentdata { 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; 
+    background-color: #ffffff;
+    border-radius: 25px;
+}
+
+.hidden { 
+    display: none; 
+}
+
